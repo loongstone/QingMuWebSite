@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>首页 | 成都青木牙科诊所</title>
+  <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+  <meta name="viewport" content="width=1200, maximum-scale=1.0, user-scalable=yes">
+
+  <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/"> -->
+
+  <link rel="stylesheet" href="/css/a86de9008350.css" type="text/css" />
+
+  <script type="text/javascript" src="/js/5c2c6bde4c26.js"></script>
+  <!--[if lt IE 9]>
+<script src="/static/js/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="body" class="index">
+
+
+  <div class="container">
+
+    <div class="container">
+      <div class="row header"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col left-col"></div>
+        <div class="col center-col">
+          <div class="links clearfix">
+            <div class="link" id="link1">
+              <a href="/treatment/">
+                <img src="/img/thumbnail1.jpg" width="104" height="72" />
+              </a>
+              <div class="caption">
+                <p>青木特色</p>
+              </div>
+            </div>
+            <div class="link" id="link2">
+              <a href="/knowledge/">
+                <img src="/img/thumbnail2.jpg" width="104" height="72" />
+              </a>
+              <div class="caption">
+                <p>口腔保健知识</p>
+              </div>
+            </div>
+            <div class="link">
+              <a href="/faq/">
+                <img src="/img/thumbnail3.jpg" width="104" height="72" />
+              </a>
+              <div class="caption">
+                <p>常见问题及回答</p>
+              </div>
+            </div>
+            <div class="link">
+              <a href="/star/">
+                <img src="/img/thumbnail4.jpg" width="104" height="72" />
+              </a>
+              <div class="caption">
+                <p>牙套小明星</p>
+              </div>
+            </div>
+            <div class="link" id="link5">
+              <a href="/about/">
+                <img src="/img/thumbnail5.jpg" width="104" height="72" />
+              </a>
+              <div class="caption">
+                <p>走进青木</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col right-col">
+          <ul class="nav">
+            <li>
+              <a href="http://en.aokiyouyou.com">English</a>
+            </li>
+
+            <!-- 已经废弃方案：通过showInHome参数决定页面是否加入首页目录 -->
+            <!-- {{ range sort .Data.Pages }}
+            {{ if .Params.showInHome }}<li><a href='{{ .Permalink }}'>{{.Title}}</a></li>{{end}}
+          {{ end }} -->
+
+            <!-- 新方法 -->
+            {{ $currentPage := . }} {{ range .Site.Menus.main }}
+            <li>
+              <a href='{{ .URL }}'>{{.Title}}</a>
+            </li>
+            <!-- <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> -->
+            {{ end }}
+
+            <!-- <li><a href="/about/">走进青木</a></li>
+          <li><a href="/doctor/" >专家介绍</a></li>
+          <li><a href="/treatment/">青木特色</a></li>
+          <li><a href="/contact/">联系我们</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row footer">
+      </div>
+    </div>
+
+    <script>
+
+      var _gaq = _gaq || [['_trackPageview']];
+      _gaq.unshift(['_setAccount', 'UA-1005700-11']);
+      (function (d, t) {
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.async = true;
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+
+      $(function () {
+        $('.carousel').carousel();
+        $('.link a').hover(
+          function () {
+            $(this).next().addClass("active");
+          },
+          function () {
+            $(this).next().removeClass("active");
+          }
+        );
+      })
+    </script>
+</body>
+
+</html>
