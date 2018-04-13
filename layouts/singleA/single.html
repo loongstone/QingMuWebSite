@@ -1,0 +1,168 @@
+{{ partial "single_head.html" .}}
+
+<body id="body" class="page">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col left-col">
+            </div>
+
+            <div class="col center-col">
+
+                <div class="content">
+
+                    <div class="clearfix">
+                        <img src="/img/about.jpg" width="601" height="74" class="pull-left" />
+                        <a href="/" class="pull-right">
+                            <img src="/img/back-to-index.png" width="136" height="74" />
+                        </a>
+                    </div>
+                    <div class="text">
+                        
+                        <div id="slide" class="carousel slide container" style="width: 447px; height: 318px;">
+                            <ol class="carousel-indicators">
+                                <li class="active" data-target="#slide" data-slide-to="0"></li>
+                                <li data-target="#slide" data-slide-to="1"></li>
+                                <li data-target="#slide" data-slide-to="2"></li>
+                                <li data-target="#slide" data-slide-to="3"></li>
+                                <li data-target="#slide" data-slide-to="4"></li>
+                            </ol>
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <img src="/img/photo/DSC_4048x.jpg" alt="" width="477px" height="318px" />
+                                </div>
+                                <div class="item">
+                                    <img src="/img/photo/DSC_4072x.jpg" alt="" width="477px" height="318px" />
+                                </div>
+                                <div class="item">
+                                    <img src="/img/photo/DSC_4075x.jpg" alt="" width="477px" height="318px" />
+                                </div>
+                                <div class="item">
+                                    <img src="/img/photo/DSC_4097x.jpg" alt="" width="477px" height="318px" />
+                                </div>
+                                <div class="item">
+                                    <img src="/img/photo/DSC_4135x.jpg" alt="" width="477px" height="318px" />
+                                </div>
+                            </div>
+                            <!-- Carousel nav -->
+                            <a class="carousel-control left" href="#slide" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#slide" data-slide="next">&rsaquo;</a>
+                        </div>
+                        {{.Content}}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col right-col">
+
+                <ul class="nav">
+                    <li class="dropdown" id="dropdown-menu-http:--en.aokiyouyou.com">
+                        <a href="http://en.aokiyouyou.com">
+                            English
+
+                        </a>
+                    </li>
+                    <li class="dropdown active" id="dropdown-menu-about">
+                        <a href="/about/">
+                            走进青木
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-doctor">
+                        <a href="/doctor/">
+                            专家介绍
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-equipment">
+                        <a href="/equipment/">
+                            精良设备
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-treatment">
+                        <a href="/treatment/">
+                            青木特色
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-knowledge">
+                        <a href="/knowledge/">
+                            口腔保健知识
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-faq">
+                        <a href="/faq/">
+                            常见问题及回答
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-video">
+                        <a href="/video/">
+                            牙套正畸之旅
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-star">
+                        <a href="/star/">
+                            牙套小明星
+
+                        </a>
+                    </li>
+                    <li class="dropdown" id="dropdown-menu-contact">
+                        <a href="/contact/">
+                            联系我们
+
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var _gaq = _gaq || [['_trackPageview']];
+        _gaq.unshift(['_setAccount', 'UA-1005700-11']);
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = '//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+
+        $(function () {
+            $('.carousel').carousel();
+            $('.link a').hover(
+                function () {
+                    $(this).next().addClass("active");
+                },
+                function () {
+                    $(this).next().removeClass("active");
+                }
+            );
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
