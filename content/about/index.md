@@ -3,6 +3,8 @@ title: "走进青木"
 date: 2018-04-12T15:03:59+08:00
 draft: true
 showInHome : true
+type : single
+layout : single
 rank : 1
 menu :
     main:
