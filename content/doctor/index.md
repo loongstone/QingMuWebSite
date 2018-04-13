@@ -8,8 +8,9 @@ type : singleA
 rank : 2
 menu :
     main:
-        name : "专家介绍"
         weight : 120
+    main2:
+        weight : 2
 ---
 
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="../img/doctor1.gif"  width="200" height="260" ></div>

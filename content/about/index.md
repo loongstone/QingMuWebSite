@@ -6,10 +6,13 @@ showInHome : true
 type : singleA
 layout : singleA
 rank : 1
+tags : ["/img/photo/DSC_4048x.jpg" , "/img/photo/DSC_4072x.jpg"]
+showPhotos : True
 menu :
     main:
-        name : "走进青木"
         weight : 100
+    main2:
+        weight : 1
 ---
 
 健康而整齐的牙齿是美丽和自信的基石。您希望你孩子的微笑更美更自信吗？那就与青木的牙医博士协手共创美丽吧，我们能给你一个满意的回答。

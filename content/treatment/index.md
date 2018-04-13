@@ -8,8 +8,9 @@ type : singleB
 layout : singleB
 menu :
     main:
-        name : "青木特色"
         weight : 160
+    main2:
+        weight : 4
 ---
 
 ![](/img/gxgn.jpg)

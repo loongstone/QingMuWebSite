@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "青木"
 theme = "gindoro"
 description = "  一个神奇的项目"
-sectionPagesMenu = "main"
+# sectionPagesMenu = ["main","main2"]
