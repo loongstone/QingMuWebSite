@@ -11,6 +11,10 @@ menu :
         weight : 160
     main2:
         weight : 4
+    treatment : 
+        pre :  "treatment"
+        weight : 1
+menuSuper : treatment
 ---
 
 ![](/img/gxgn.jpg)

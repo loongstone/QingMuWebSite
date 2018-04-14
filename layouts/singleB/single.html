@@ -1,136 +1,15 @@
-{{ partial "single_head.html" .}}
 
-<body id="body" class="page">
 
-    <div class="container">
-        <div class="row">
-
-            <div class="col left-col">
-            </div>
-
-            <div class="col center-col">
-
-                <div class="content">
-
-                    <div class="clearfix">
-                        <img src="/img/treatment.jpg" width="601" height="74" class="pull-left" />
-                        <a href="/" class="pull-right">
-                            <img src="/img/back-to-index.png" width="136" height="74" />
-                        </a>
-                    </div>
-                    <div class="text">
-
-                        <ul class="subnav clearfix">
-                            <li class="active">个性功能正畸</li>
-                            <li>
-                                <a href="/treatment/sczj/">舌侧正畸</a>
-                            </li>
-                            <li>
-                                <a href="/treatment/mgy/">美冠牙</a>
-                            </li>
-                        </ul>
-                        {{.Content}}
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col right-col">
-
-                <ul class="nav">
-                    <li class="dropdown" id="dropdown-menu-http:--en.aokiyouyou.com">
-                        <a href="http://en.aokiyouyou.com">
-                            English
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-about">
-                        <a href="/about/">
-                            走进青木
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-doctor">
-                        <a href="/doctor/">
-                            专家介绍
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-equipment">
-                        <a href="/equipment/">
-                            精良设备
-
-                        </a>
-                    </li>
-                    <li class="dropdown active" id="dropdown-menu-treatment">
-                        <a href="/treatment/">
-                            青木特色
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-knowledge">
-                        <a href="/knowledge/">
-                            口腔保健知识
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-faq">
-                        <a href="/faq/">
-                            常见问题及回答
-
-                            <!-- </a></li><li class="dropdown"
-        id="dropdown-menu-video"><a href="/video/">
-            牙套正畸之旅
-            
-        </a></li><li class="dropdown"
-        id="dropdown-menu-star"><a href="/star/">
-            牙套小明星 -->
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-contact">
-                        <a href="/contact/">
-                            联系我们
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-contact">
-                        <a href="/contact/">
-                            联系我们
-
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
+{{ partial "head.html" .}}
+{{ partial "header.html" . }}
+<section id="main">
+    SingleList
+    <div>{{.Content}}</div>
+    <div>
+        {{ range .Data.Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
     </div>
+</section>
 
-    <script>
-
-        var _gaq = _gaq || [['_trackPageview']];
-        _gaq.unshift(['_setAccount', 'UA-1005700-11']);
-        (function (d, t) {
-            var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            g.async = true;
-            g.src = '//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g, s);
-        })(document, 'script');
-
-        $(function () {
-            $('.carousel').carousel();
-            $('.link a').hover(
-                function () {
-                    $(this).next().addClass("active");
-                },
-                function () {
-                    $(this).next().removeClass("active");
-                }
-            );
-        })
-    </script>
-</body>
-
-</html>
+{{ partial "footer.html" . }}
