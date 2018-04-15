@@ -1,8 +1,7 @@
 ---
 title: "走进青木"
 date: 2018-04-12T15:03:59+08:00
-draft: true
-showInHome : true
+draft: false
 rank : 1
 tags : ["/img/photo/DSC_4048x.jpg" , "/img/photo/DSC_4072x.jpg"]
 showPhotos : True
