@@ -1,3 +1,7 @@
+<!-- 页面为普通页面,添加了页首的导航条,
+    将本页和下属子页中带有menu的页面添加到导航中
+    为了搜索子页,本页必须因为_index,使用list.html模板,为了保证子页有相同的导航条,子页也需要为_index,使用相同模板 -->
+
 {{ partial "single_head.html" .}}
 
 <body id="body" class="page">
@@ -19,125 +23,19 @@
                         </a>
                     </div>
                     <div class="text">
-                        <ul class="subnav clearfix">
-                                {{ $currentPage := . }}
-                                {{ $currentMenu := .Params.menuSuper }} 
-                                {{ range .Site.Menus }} 
-                                    {{range .}}
-                                        {{if eq .Menu $currentMenu}}
-                                            {{if or ($currentPage.IsMenuCurrent $currentMenu .) ($currentPage.HasMenuCurrent $currentMenu .)}}
-                                                <li class="active">{{.Title}}</li>
-    
-                                            {{else}}
-                                                <li>
-                                                    <a href={{.URL}}>{{.Title}}</a>
-                                                </li>
-                                            {{ end }}  
-                                        {{end}}
-                                    {{end}}
-                                {{ end }}
-                        </ul>
-                        {{.Content}}
+                        {{ partial "top_menu.html" .}} {{.Content}}
                     </div>
-
                 </div>
 
             </div>
 
-            <div class="col right-col">
-
-                <ul class="nav">
-                    <li class="dropdown" id="dropdown-menu-http:--en.aokiyouyou.com">
-                        <a href="http://en.aokiyouyou.com">
-                            English
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-about">
-                        <a href="/about/">
-                            走进青木
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-doctor">
-                        <a href="/doctor/">
-                            专家介绍
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-equipment">
-                        <a href="/equipment/">
-                            精良设备
-
-                        </a>
-                    </li>
-                    <li class="dropdown active" id="dropdown-menu-treatment">
-                        <a href="/treatment/">
-                            青木特色
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-knowledge">
-                        <a href="/knowledge/">
-                            口腔保健知识
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-faq">
-                        <a href="/faq/">
-                            常见问题及回答
-
-                            <!-- </a></li><li class="dropdown"
-        id="dropdown-menu-video"><a href="/video/">
-            牙套正畸之旅
-            
-        </a></li><li class="dropdown"
-        id="dropdown-menu-star"><a href="/star/">
-            牙套小明星 -->
-
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-contact">
-                        <a href="/contact/">
-                            联系我们
-                        </a>
-                    </li>
-                    <li class="dropdown" id="dropdown-menu-contact">
-                        <a href="/contact/">
-                            联系我们
-
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
+            {{ partial "main_menu.html" .}}
 
         </div>
     </div>
 
     <script>
-
-        var _gaq = _gaq || [['_trackPageview']];
-        _gaq.unshift(['_setAccount', 'UA-1005700-11']);
-        (function (d, t) {
-            var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            g.async = true;
-            g.src = '//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g, s);
-        })(document, 'script');
-
-        $(function () {
-            $('.carousel').carousel();
-            $('.link a').hover(
-                function () {
-                    $(this).next().addClass("active");
-                },
-                function () {
-                    $(this).next().removeClass("active");
-                }
-            );
-        })
+        {{ partial "script.html" .}}
     </script>
 </body>
 

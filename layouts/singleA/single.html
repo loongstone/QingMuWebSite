@@ -1,77 +1,35 @@
 {{ partial "single_head.html" .}}
+<!-- {{ partial "single_header.html" .}}  -->
 
 <body id="body" class="page">
+
     <div class="container">
         <div class="row">
+
             <div class="col left-col">
             </div>
+
             <div class="col center-col">
 
                 <div class="content">
 
-                    <div class="clearfix">
-                        <!-- <img src="/img/about.jpg" width="601" height="74" class="pull-left" /> -->
-                        {{.Title}}
-                        <a href="/" class="pull-right">
-                            <img src="/img/back-to-index.png" width="136" height="74" />
-                        </a>
-                    </div>
+                    {{ partial "single_head_top.html" .}}
                     <div class="text">
-                        {{if .Params.showPhotos}}
-                            {{ partial "photos.html" .}}
-                        {{end}}
+                        {{if .Params.showPhotos}} {{ partial "photos.html" .}} {{end}} 
+                        
                         {{.Content}}
+
                     </div>
                 </div>
-
             </div>
 
-            <div class="col right-col">
-
-                <ul class="nav">
-                    <li class="dropdown" id="dropdown-menu-http:--en.aokiyouyou.com">
-                        <a href="http://en.aokiyouyou.com">
-                            English
-
-                        </a>
-                    </li>
-                   
-                    {{ $currentPage := . }} {{ range .Site.Menus.main2 }}
-                    <li class="dropdown" id="dropdown-menu-contact">
-                      <a href='{{ .URL }}'>{{.Title}}</a>
-                    </li>
-                    <!-- <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> -->
-                    {{ end }}
-                </ul>
-
-            </div>
+            {{ partial "main_menu.html" .}}
 
         </div>
     </div>
 
     <script>
-
-        var _gaq = _gaq || [['_trackPageview']];
-        _gaq.unshift(['_setAccount', 'UA-1005700-11']);
-        (function (d, t) {
-            var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            g.async = true;
-            g.src = '//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g, s);
-        })(document, 'script');
-
-        $(function () {
-            $('.carousel').carousel();
-            $('.link a').hover(
-                function () {
-                    $(this).next().addClass("active");
-                },
-                function () {
-                    $(this).next().removeClass("active");
-                }
-            );
-        })
+            {{ partial "script.html" .}}
     </script>
 </body>
 

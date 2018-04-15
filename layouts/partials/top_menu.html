@@ -1,0 +1,18 @@
+<ul class="subnav clearfix">
+        {{ $currentPage := . }}
+        {{ $currentMenu := .Params.menuSuper }} 
+        {{ range .Site.Menus }} 
+            {{range .}}
+                {{if eq .Menu $currentMenu}}
+                    {{if or ($currentPage.IsMenuCurrent $currentMenu .) ($currentPage.HasMenuCurrent $currentMenu .)}}
+                        <li class="active">{{.Title}}</li>
+
+                    {{else}}
+                        <li>
+                            <a href={{.URL}}>{{.Title}}</a>
+                        </li>
+                    {{ end }}  
+                {{end}}
+            {{end}}
+        {{ end }}
+</ul>

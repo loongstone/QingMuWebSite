@@ -1,0 +1,21 @@
+var _gaq = _gaq || [['_trackPageview']];
+        _gaq.unshift(['_setAccount', 'UA-1005700-11']);
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = '//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+
+        $(function () {
+            $('.carousel').carousel();
+            $('.link a').hover(
+                function () {
+                    $(this).next().addClass("active");
+                },
+                function () {
+                    $(this).next().removeClass("active");
+                }
+            );
+        })
