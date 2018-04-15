@@ -12,7 +12,7 @@ menu :
     main2:
         weight : 4
     treatment : 
-        pre :  "treatment"
+        title :  "个性功能正畸"
         weight : 1
 menuSuper : treatment
 ---
