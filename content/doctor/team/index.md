@@ -2,8 +2,6 @@
 title: "Index"
 date: 2018-04-15T10:29:13+08:00
 draft: false
-layout : singleA
-type : singleA
 ---
 ![](/img/2.gif)
 

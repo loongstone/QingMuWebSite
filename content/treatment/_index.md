@@ -4,8 +4,6 @@ date: 2018-04-12T21:09:35+08:00
 draft: false
 showInHome : true
 rank : 3
-type : singleB
-layout : singleB
 menu :
     main:
         weight : 160

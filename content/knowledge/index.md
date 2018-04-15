@@ -3,8 +3,6 @@ title: "口腔保健知识"
 date: 2018-04-12T11:25:59+08:00
 draft: false
 showInHome : true
-layout : singleA
-type : singleA
 menu :
     main2:
         weight : 5

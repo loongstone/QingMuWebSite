@@ -2,8 +2,6 @@
 title: "舌侧正畸"
 date: 2018-04-14T22:50:48+08:00
 draft: false
-type : singleB
-layout : singleB
 menu :
     treatment : 
         weight : 2
