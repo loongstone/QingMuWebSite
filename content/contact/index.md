@@ -12,3 +12,4 @@ menu :
 
 
 ## 百度地图在此
+<div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
