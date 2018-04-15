@@ -8,8 +8,8 @@ menu :
         weight : 5
 ---
 
-*   [儿童口腔知识](http://www.aokiyouyou.com/knowledge/children)
-*   [刷牙知识](http://www.aokiyouyou.com/knowledge/toothbrush/)
+*   [儿童口腔知识](/knowledge/children)
+*   [刷牙知识](/knowledge/toothbrush/)
 *   [牙线知识](http://www.aokiyouyou.com/knowledge/floss/)
 *   [多吃粗粮, 避免”双排牙”](http://www.aokiyouyou.com/knowledge/culiang/)
 *   [口呼吸可能会让孩子变丑](http://www.aokiyouyou.com/knowledge/mouth-breathing/)
