@@ -1,9 +1,12 @@
-##使用说明
+
+ **[点此查看网站效果](http://qm.itsky.top)**
+## 使用说明
+
 通过``` hugo new /xxx/index.md ```创建新页面,通过Menu配置main参数,显示在首页菜单中,通过配置main2参数,显示在首页意外的菜单中
 通过menuSuper : [MenuName],与menu : menuName ,设置二级页中的导航.
 一共ch创建并使用了三个模板:index.html,list.html和single.html,除站点index页面外,其他页面都可以通过*.md文件创建\修改网站页面,并通过参数配置菜单导航.
 
-重构说明:
+## 重构说明:
 - 创建 list.html ,根据Page中定义的Menu生成菜单.
 - 创建 single.html ,填充md文件作为内容
 - 因对网页中的 CSS,JS 不够了解,这部分基本使用了原网站的代码,如果需要适配移动端屏幕,需要重构这部分.
