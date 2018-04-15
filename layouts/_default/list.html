@@ -16,12 +16,7 @@
 
                 <div class="content">
 
-                    <div class="clearfix">
-                        <img src="/img/treatment.jpg" width="601" height="74" class="pull-left" />
-                        <a href="/" class="pull-right">
-                            <img src="/img/back-to-index.png" width="136" height="74" />
-                        </a>
-                    </div>
+                        {{ partial "single_head_top.html" .}}
                     <div class="text">
                         {{ partial "top_menu.html" .}} {{.Content}}
                     </div>

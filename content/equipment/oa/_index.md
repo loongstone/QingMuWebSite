@@ -2,8 +2,6 @@
 title: "OAKi管理系统"
 date: 2018-04-12T11:25:59+08:00
 draft: false
-type : singleB
-layout : singleB
 menu : 
     equipent : 
         title : OAKi管理系统
